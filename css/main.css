@@ -1,0 +1,23 @@
+/* Heebo */
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@200;400;700&display=swap');
+
+:root {
+    font-family: Heebo, Arial, sans-serif;
+    --palette-hotpink: #ff69b4;
+    --palette-teal: #199696;
+    --palette-silver: #b3bcc3;
+    --palette-tea: #c2b9b0;
+    --palette-brown: #7e686a;
+    --palette-green: #afd275;
+
+}
+
+html {
+    /*#background: linear-gradient(135deg, var(--palette-hotpink) 0%, var(--palette-teal) 100%);*/
+    background: var(--palette-tea);
+    height: 100vh;
+}
+
+body {
+    display: grid;
+}
