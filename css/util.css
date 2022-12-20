@@ -1,0 +1,38 @@
+.icon {
+    height: 1em;
+    vertical-align: middle;
+}
+
+.horiz-list {
+    padding-left: 0;
+}
+
+/*
+I'd prefer .horiz-list > li, I don't understand why it's discouraged.
+*/
+.horiz-list-item {
+    display: inline-block;
+    list-style: none;
+}
+
+.bar-sep + .bar-sep::before {
+    content: " | ";
+}
+
+.outlined {
+    text-shadow: 
+        -2px  2px 0 black,
+         2px  2px 0 black,
+         2px -2px 0 black,
+        -2px -2px 0 black;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+}
+
+.right {
+    float: right;
+    height: 100%;
+}
