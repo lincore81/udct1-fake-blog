@@ -1,0 +1,264 @@
+
+/* VARIABLES */
+
+/* defaults */
+#articles {
+    --row-height: min-content; 
+    /* card grid sizes */
+    --single-width: span 1;
+    --double-width: span 2;
+    --single-height: span 1;
+    --double-height: span 1;
+
+    --max-article-img-height: 260px;
+    --article-img-ratio: 1 / 1;
+    --max-width: 1000px;
+    --article-flex-dir: row;
+}
+
+/**
+ * Designed to be viewed with a minimum inner width of 300px:
+ */
+
+@media (max-width: 719px) {
+    #articles {
+        --article-flex-dir: column;
+        --max-width: 600px;
+        --single-width: span 4;
+        --double-width: span 4;
+        --single-height: span 1;
+        --double-height: span 2;
+        --article-img-ratio: 2 / 1;
+        --max-article-img-height: 200px;
+    }
+}
+
+@media (min-width: 720px) and (max-width: 999px) {
+    #articles {
+        --single-width: span 2;
+        --double-width: span 4;
+        --max-article-img-height: 260px;
+    }
+}
+
+@media (min-width: 1000px) {
+    #articles {
+        --single-width: span 2;
+        --double-width: span 4;
+        --max-article-img-height: 280px;
+    }
+}
+
+@media (min-width: 1200px) {
+    #articles {
+        --single-width: span 1;
+        --double-width: span 2;
+        --article-img-ratio: 3 / 4;
+        --max-width: 1300px;
+        --max-article-img-height: 330px;
+    }
+}
+
+@media (min-width: 1400px) {
+    #articles {
+        --single-width: span 1;
+        --double-width: span 2;
+        --article-img-ratio: 1 / 1;
+        --max-width: 1500px;
+        --max-article-img-height: 360px;
+    }
+}
+
+
+#articles {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    /* This doesn't seem very flexible, but I don't want to hard code the grid
+     * template rows as that approach seems impractical for a static blog. 
+     */
+    grid-auto-rows: min-content;
+    grid-auto-flow: row;
+    margin: 16px auto;
+    max-width: var(--max-width);
+}
+
+.cat-care.card {
+    --accent-colour: green;
+}
+
+.cat-breeds.card {
+    --accent-colour: purple;
+}
+
+.cat-training.card {
+    --accent-colour: blue;
+}
+
+.cat-agility.card {
+    --accent-colour: darkorange;
+}
+
+.cat-personal.card {
+    --accent-colour: teal;
+}
+
+.cat-advert.card {
+    --accent-colour: black;
+    padding: 0;
+    min-height: 260px;
+}
+
+.card {
+    padding: 0;
+    margin: 10px;
+    background: white;
+    border-radius: 8px;
+    border-bottom: 4px solid var(--accent-colour);
+}
+
+.card.feature {
+    padding: 16px 32px;
+    background: var(--accent-colour);
+    color: white;
+    text-align: center;
+}
+
+.article-title.feature {
+    font-size: 1.6em;
+}
+
+.single-col {
+    grid-column: var(--single-width);
+}
+
+.single-row {
+    grid-row: var(--single-height);
+}
+
+.double-col { 
+    grid-column: var(--double-width);
+    display: flex;
+    flex-direction: var(--article-flex-dir);
+}
+
+.double-row {
+    grid-row: var(--double-height);
+}
+
+
+.rows.advert {
+    justify-content: space-between;
+    height: 100%;
+}
+
+.left-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 8px;
+
+}
+
+.article-title {
+    margin: 8px 0 4px 0;
+}
+
+.article-preview {
+    margin: 0;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.article-image {
+    aspect-ratio: var(--article-img-ratio);
+    max-height: var(--max-article-img-height);
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.article-link {
+    display: block;
+    margin: 10px;
+}
+
+
+.article-header {
+    text-transform: uppercase;
+    font-size: 0.7em;
+    flex-basis: auto;
+}
+
+.article-teaser {
+    margin: 0.5em 0;
+}
+
+.button {
+    display: block;
+    background: var(--accent-colour);
+    color: white;
+    margin: 12px;
+    padding: 4px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.button:hover {
+    opacity: 0.8;
+}
+
+.button.inverted {
+    background: white;
+    color: var(--accent-colour);
+}
+
+
+.author-thumb {
+    --size: 2em;
+    width: var(--size);
+    height: var(--size);
+    vertical-align: middle;
+    border-radius: 50%;
+    display: inline-block;
+    border: red 1px solid;
+}
+
+.continue-reading {
+    display: block;
+}
+
+#butt-cover-ad {
+    padding: 0;
+    background:         
+        url("../ads/butt-cover.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: var(--accent-colour);
+    color: white;
+}
+
+/** my ad blocker hides elements with these classes: */
+.ad-title, .ad-tagline {
+    margin: 0;
+}
+
+.ad-tagline {
+    line-height: 1.1rem;
+}
+
+
+.ad-tag {
+    margin: 8px;
+    text-transform: uppercase;
+    font-size: 0.5em;
+}
+
+.ad-content {
+    padding: 8px;
+    background: rgba(0, 0, 0, 0.6);
+    text-align: center;
+}
