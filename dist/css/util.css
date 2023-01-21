@@ -17,6 +17,7 @@ I'd prefer .horiz-list > li, I don't understand why it's discouraged.
 
 .bar-sep + .bar-sep::before {
     content: " | ";
+    opacity: 0.4;
 }
 
 .outlined {
@@ -30,9 +31,4 @@ I'd prefer .horiz-list > li, I don't understand why it's discouraged.
 .row {
     display: flex;
     align-items: center;
-}
-
-.right {
-    float: right;
-    height: 100%;
 }
