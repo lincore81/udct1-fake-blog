@@ -1,0 +1,13 @@
+#page-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0 8px;
+    background: url("../assets/footer-bg.png");
+    background-size: contain;
+}
+
+.footer-item {
+    margin: 4px 0;
+}

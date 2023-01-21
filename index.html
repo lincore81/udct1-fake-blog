@@ -8,139 +8,383 @@
 </head>
 
 <body>
-    <header class="page-header">
-        <button id="menu">
-            <img src="assets/menu.svg" class="img-button">
+    <header id="page-header">
+        <!-- TODO: add onclick listener that toggles #main-menu visibility (out of scope) -->
+        <button id="hamburger-menu-button">
+            <img src="assets/menu.svg" class="full-size-img">
         </button>
-        <div id="logo-and-title">
-            <img src="assets/logo.png" id="site-logo" alt="">
-            <h1 id="site-title" class="outlined">
-                Doug's Dog Blog
-            </h1>
-        </div>
-        <nav id="site-nav">
-            <ul class="header-item horiz-list">
-                <a href="#" class="nav-item">
-                    <li class="horiz-list-item">
-                        Care
-                    </li>
-                </a>
-                <a href="#" class="nav-item">
-                    <li class="horiz-list-item">
-                        Breeds
-                    </li>
-                </a>
-                <a href="#" class="nav-item">
-                    <li class="horiz-list-item">
-                        Training
-                    </li>
-                </a>
-                <a href="#" class="nav-item">
-                    <li class="horiz-list-item">
-                        Reviews
-                    </li>
-                </a>
-                <a href="#" class="nav-item">
-                    <li class="horiz-list-item">
-                        Breeding
-                    </li>
-                </a>
-                <a href="#" class="nav-item">
-                    <li class="horiz-list-item">
-                        Agility
-                    </li>
-                </a>
-                <a href="#" class="nav-item">
-                    <li class="horiz-list-item">
-                        Personal
-                    </li>
-                </a>
-            </ul>
-        </nav>
+        <!-- TODO: add vertical layout for mobile menu (makes little sense w/o js) -->
+        <div id="main-menu">
+            <div id="logo-and-title"> 
+                <img src="assets/logo.png" id="site-logo" alt=""> 
+                <h1 id="site-title" class="outlined"> Doug's Dog Blog</h1>
+            </div>
+            <nav id="site-nav">
+                <ul class="header-item horiz-list">
+                    <a href="#" class="nav-item">
+                        <li class="horiz-list-item">
+                            Care
+                        </li>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <li class="horiz-list-item">
+                            Breeds
+                        </li>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <li class="horiz-list-item">
+                            Training
+                        </li>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <li class="horiz-list-item">
+                            Reviews
+                        </li>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <li class="horiz-list-item">
+                            Breeding
+                        </li>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <li class="horiz-list-item">
+                            Agility
+                        </li>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <li class="horiz-list-item">
+                            Personal
+                        </li>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <li class="horiz-list-item">
+                            Merch
+                        </li>
+                    </a>
+                </ul>
+            </nav>
     </header>
     <main id="articles">
-        <section class="cat-care double-col double-row card">
-            <div class="left-side">
-                <header class="article-header">
-                    <img class="author-thumb" src="assets/authors/doug.png">
-                    <span class="article-meta">
-                        Doug Dobberty | 18 December 2022
-                    </span>
-                </header>
-                <div class="article-preview">
-                    <h2 class="article-title">
-                        How expensive dog food can save money in the long run
-                    </h2>
-                    <p class="article-teaser">
-                        When you are living on a small budget, buying good dog
-                        food seems like a luxury. However, a recent study comes
-                        to a different conclusion.
-                        <a href="#" class="continue-reading">Continue reading ></a>
-                    </p>
+        <section class="col2 row2 card">
+            <a href="articles/2023-01-08-giant-dogs/article.html"
+               class="cols card-link" aria-describedby="cta1">
+                <div class="left-side">
+                    <header class="article-header meta">
+                        <img class="author-thumb" src="assets/authors/doug.png"
+                             alt="">
+                        <span class="bar-sep">Doug Dobberty</span>
+                        <span class="bar-sep">08/01/2023</span>
+                    </header>
+                    <div class="article-preview">
+                        <h2 class="article-title">
+                            My daughter wanted a pony, I got her something
+                            better
+                        </h2>
+                        <p class="article-teaser">
+                            Horses aren't cheap or easy to take care of,
+                            especially not for my 3-year-old daughter. Instead
+                            of explaining that to her, I did this.
+                        </p>
+                        <p class="article-cta pseudo-link" id="cta1">
+                            Continue reading
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <img src="articles/2022-12-17-good-dog-food/main.webp"
-                class="article-image" 
-                alt="A golden retriever is eating dry food">
+                <img src="articles/2023-01-08-giant-dogs/main.jpg"
+                     class="article-image" alt="">
+            </a>
+        </section>
 
+        <section class="col2 row2 card">
+            <a href="articles/2022-12-19-giant-dogs/article.html"
+               class="cols card-link" aria-describedby="cta2">
+                <div class="left-side">
+                    <header class="article-header meta">
+                        <img class="author-thumb" src="assets/authors/peter.png">
+                        <span class="bar-sep">Peter Dobberty</span>
+                        <span class="bar-sep">18/12/2022</span>
+                    </header>
+                    <div class="article-preview">
+                        <h2 class="article-title">
+                            How expensive dog food can save money in the long
+                            run
+                        </h2>
+                        <p class="article-teaser">
+                            When you are living on a small budget, buying good
+                            dog food seems like a luxury. However, a recent
+                            study comes to a different conclusion.
+                        </p>
+                        <!-- Refusing to nest links (bad a11y and more) -->
+                        <p class="article-cta pseudo-link" id="cta2">
+                            Continue reading
+                        </p>
+                    </div>
+                </div>
+                <img src="articles/2022-12-17-good-dog-food/main.webp"
+                     class="article-image" alt="">
+            </a>
         </section>
-        <section class="cat-personal double-col double-row card cols">
-            <div class="left-side">
-                <header class="article-header">
+        <section class="col1 row1 card feature">
+            <a href="https://www.akc.org/breed-selector-tool" target="_blank"
+               class="rows card-link" aria-describedby="cta3">
+                <header class="article-header meta">
                     <img class="author-thumb" src="assets/authors/doug.png">
-                    <span class="article-meta">
-                        Doug Dobberty | 17 December 2022
-                    </span>
+                    <span class="bar-sep">Doug Dobberty</span>
+                    <span class="bar-sep">15/12/2022</span>
                 </header>
                 <div class="article-preview">
-                    <h2 class="article-title">
-                        My daughter wanted a pony, I got her something better
+                    <h2 class="article-title feature">
+                        Which breed is right for you?
                     </h2>
-                    <p class="article-teaser">
-                        Horses aren't cheap or easy to take care of, especially not
-                        for my 3-year-old daughter. Instead of explaining
-                        that to her, I did this.
-                        <a href="#" class="continue-reading">Continue reading ></a>
+                    <p>
+                        My patented<sup>*</sup> personality test knows the answer.
                     </p>
+                    <div class="pseudo-link button inverted" id="cta3">
+                        Take the test
+                    </div>
                 </div>
-            </div>
-            <img src="articles/2022-12-19-giant-dogs/main.jpg"
-                class="article-image"
-                alt="My daughter unwrapped her birthday present, a great dane.">
+            </a>
         </section>
-        <section class="cat-breeds single-col single-row card rows feature">
-            <header class="article-header">
-                <img class="author-thumb" src="assets/authors/doug.png">
-                <span class="article-meta">
-                    Doug Dobberty | 22 March 2022
-                </span>
-            </header>
-            <div class="article-preview">
-                <h2 class="article-title feature">
-                    Which breed is right for you?
-                </h2>
-                <p>
-                    My patented personality test knows the answer.
-                    <a href="https://www.akc.org/breed-selector-tool/" class="button inverted">Take the test</a>
-                </p>
-            </div>
-        </section>
-        <a class="cat-advert single-col card" href="https://www.etsy.com/listing/210782327/flower-rear-gear-butt-covers-for-your">
-            <section class="rows advert" id="butt-cover-ad">
-                <span class="ad-tag">#ad</span>
+
+        <section class="col1 card" id="butt-cover-ad">
+            <a href="https://www.etsy.com/listing/210782327/flower-rear-gear-butt-covers-for-your"
+               target="_blank" class="advert rows card-link">
+                <div class="ad-tag">#sponsored</div>
                 <div class="ad-content">
                     <h2 class="ad-title">
-                        The Butt Cover
+                        The Butt Cover™
                     </h2>
                     <p class="ad-tagline">
-                        Just because dogs have buttholes,
-                        you don't need to look at them.
+                        Hide the unsightly bits
                     </p>
                 </div>
-            </section>
-        </a>
+            </a>
+        </section>
+
+        <section class="col2 row2 card">
+            <a href="articles/2022-12-19-giant-dogs/article.html"
+               class="cols card-link" aria-describedby="cta4">
+                <div class="left-side">
+                    <header class="article-header meta">
+                        <img class="author-thumb" src="assets/authors/doug.png">
+                        <span class="bar-sep">Doug Dobberty</span>
+                        <span class="bar-sep">03/12/2022</span>
+                    </header>
+                    <div class="article-preview">
+                        <h2 class="article-title">It's time to unfug the pug
+                        </h2>
+                        <p class="article-teaser">
+                            When a genetic defect becomes the breeding standard,
+                            you created the pug. Especially in old age, their
+                            suffering is undeniable.
+                        </p>
+                        <p class="article-cta pseudo-link" id="cta4">
+                            Continue reading
+                        </p>
+                    </div>
+                </div>
+                <img src="articles/2022-12-03-pug/main.jpg"
+                     class="article-image" alt="">
+            </a>
+        </section>
+
+        <section class="col2 row2 card">
+            <a href="articles/2022-12-19-giant-dogs/article.html"
+               class="cols card-link" aria-describedby="cta5">
+                <div class="left-side">
+                    <header class="article-header meta">
+                        <img class="author-thumb" src="assets/authors/doug.png">
+                        <span class="bar-sep">Doug Dobberty</span>
+                        <span class="bar-sep">18/11/2022</span>
+                    </header>
+                    <div class="article-preview">
+                        <h2 class="article-title">
+                            You wouldn't expect these dogs to be kid friendly
+                        </h2>
+                        <p class="article-teaser">
+                            Dogs like the English bulldog were historically bred
+                            for dog fights. Since them, they have been selected
+                            for less aggression and make great family dogs
+                            today.
+                        </p>
+                        <p class="article-cta pseudo-link" id="cta5">
+                            Continue reading
+                        </p>
+                    </div>
+                </div>
+                <img src="articles/2022-11-18-kid-friendly-dogs/main.webp"
+                     class="article-image" alt="">
+            </a>
+        </section>
+
+        <section class="col2 row2 card">
+            <a href="articles/2022-12-19-giant-dogs/article.html"
+               class="cols card-link" aria-describedby="cta6">
+                <div class="left-side">
+                    <header class="article-header meta">
+                        <img class="author-thumb" src="assets/authors/peter.png">
+                        <span class="bar-sep">Peter Dobberty</span>
+                        <span class="bar-sep">10/11/2022</span>
+                    </header>
+                    <div class="article-preview">
+                        <h2 class="article-title">
+                            Dog therapy works, but the dog is seldomly the
+                            problem 
+                        </h2>
+                        <p class="article-teaser">
+                            There's no mandatory licence for dog owning, sadly,
+                            and so it is only natural that many new dog owners
+                            know next to nothing about man's best friend.
+                        </p>
+                        <p class="article-cta pseudo-link" id="cta6">
+                            Continue reading
+                        </p>
+                    </div>
+                </div>
+                <img src="articles/2022-11-10-dog-therapy/main.webp"
+                     class="article-image" alt="">
+            </a>
+        </section>
+
+        <section class="col2 row2 card">
+            <a href="articles/2022-12-19-giant-dogs/article.html"
+               class="cols card-link" aria-describedby="cta7">
+                <div class="left-side">
+                    <header class="article-header meta">
+                        <img class="author-thumb" src="assets/authors/doug.png">
+                        <span class="bar-sep">Doug Dobberty</span>
+                        <span class="bar-sep">31/10/2022</span>
+                    </header>
+                    <div class="article-preview">
+                        <h2 class="article-title">
+                            The 10 steps to train any dog 
+                        </h2>
+                        <p class="article-teaser">
+                            Whoever said that old dogs can't learn new tricks
+                            didn't read this article. Step number 7 is crucial,
+                            but often overlooked.
+                        </p>
+                        <p class="article-cta pseudo-link" id="cta7">
+                            Continue reading
+                        </p>
+                    </div>
+                </div>
+                <img src="articles/2022-10-31-dog-training/main.webp"
+                     class="article-image" alt="">
+            </a>
+        </section>
+
+        <section class="col1 row2 card">
+            <a href="articles/2022-12-19-giant-dogs/article.html"
+               class="card-link" aria-describedby="cta8">
+                <div class="left-side">
+                    <header class="article-header meta">
+                        <img class="author-thumb" src="assets/authors/peter.png">
+                        <span class="bar-sep">Peter Dobberty</span>
+                        <span class="bar-sep">26/10/2022</span>
+                    </header>
+                    <div class="article-preview">
+                        <h2 class="article-title">
+                            Should I play dress-up with my dog?
+                        </h2>
+                        <p class="article-teaser">
+                            If you don't appreciate a dog wearing a skirt, you
+                            may be surprised to learn that certain breeds aren't
+                            well-adjusted to the outside world anymore.
+                        </p>
+                        <p class="article-cta pseudo-link" id="cta8">
+                            Continue reading
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </section>        
+
+        <section class="col1 row1 card feature">
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"
+               class="rows card-link" aria-describedby="cta9">
+                <header class="article-header meta">
+                    <img class="author-thumb" src="assets/authors/doug.png">
+                    <span class="bar-sep">Doug Dobberty</span>
+                    <span class="bar-sep">20/10/2022</span>
+                </header>
+                <div class="article-preview">
+                    <h2 class="article-title feature">
+                        DDB Merch
+                    </h2>
+                    <p>
+                        It's time for another merch drop. Get it while it's hot!
+                    </p>
+                    <div class="pseudo-link button inverted" id="cta9">
+                        Buy my merch
+                    </div>
+                </div>
+            </a>
+        </section>
+
+        <section class="col2 row2 card">
+            <a href="articles/2022-12-19-giant-dogs/article.html"
+               class="cols card-link" aria-describedby="cta10">
+                <div class="left-side">
+                    <header class="article-header meta">
+                        <img class="author-thumb" src="assets/authors/doug.png">
+                        <span class="bar-sep">Doug Dobberty</span>
+                        <span class="bar-sep">09/10/2022</span>
+                    </header>
+                    <div class="article-preview">
+                        <h2 class="article-title">
+                            How to SEO dog related content
+                        </h2>
+                        <p class="article-teaser">
+                            You may be surprised how difficult this actually is.
+                            Dog breed blog food training dog agility dog pet dog
+                            toy family dog care health vet dog.
+                        </p>
+                        <p class="article-cta pseudo-link" id="cta10">
+                            Continue reading
+                        </p>
+                    </div>
+                </div>
+                <img src="articles/2022-10-09-seo/main.jpg"
+                     class="article-image" alt="">
+            </a>
+        </section>
+
+        <section class="col2 row2 card">
+            <a href="articles/2022-12-19-giant-dogs/article.html"
+               class="cols card-link" aria-describedby="cta11">
+                <div class="left-side">
+                    <header class="article-header meta">
+                        <img class="author-thumb" src="assets/authors/peter.png">
+                        <span class="bar-sep">Peter Dobberty</span>
+                        <span class="bar-sep">28/09/2022</span>
+                    </header>
+                    <div class="article-preview">
+                        <h2 class="article-title">
+                            Ten signs your dog might be gay
+                        </h2>
+                        <p class="article-teaser">
+                            Unless you are a breeder or a particularly
+                            close-minded person, you shouldn't need to worry
+                            about your dogs sexuality, or anybody's for that
+                            matter. If you're still a bit bi-curious, read this.
+                        </p>
+                        <p class="article-cta pseudo-link" id="cta11">
+                            Continue reading
+                        </p>
+                    </div>
+                </div>
+                <img src="articles/2022-09-28-gay-dogs/main.webp"
+                     class="article-image" alt="">
+            </a>
+        </section>
+
     </main>
-    <footer class="page-footer">
+    <nav class="pagination">
+        <button class="btn">« Older</button>
+        <button class="btn" disabled>Newer »</button>
+    </nav>
+    <footer id="page-footer">
         <ul class="footer-item">
             <li class="horiz-list-item bar-sep">
                 <a href="#">Terms & Conditions</a>
@@ -152,30 +396,43 @@
                 <a href="#">Advertising</a>
             </li>
             <li class="horiz-list-item bar-sep">
-                <a href="#">Support Me</a>
+                <a href="#">
+                    <img class="icon" src="assets/ebeg.svg" alt="">
+                    Support Me
+                </a>
             </li>
             <li class="horiz-list-item bar-sep">
-                <a href="#">RSS Feed</a>
+                <a href="#">
+                    <img class="icon" src="assets/rss.svg" alt="">
+                    RSS Feed
+                </a>
             </li>
         </ul>
         <ul class="footer-item">
             <li class="horiz-list-item bar-sep">
                 <a href="https://elon.world/dougdobberty">
-                    <img class="icon" src="assets/elonia.svg" alt="">Elon's World
+                    <img class="icon" src="assets/elonia.svg" alt="">
+                    Elon's World
                 </a>
             </li>
             <li class="horiz-list-item bar-sep">
                 <a href="https://facepalm.social/dougdobberty">
-                    <img class="icon" src="assets/facepalm.svg" alt="">Faceplant
+                    <img class="icon" src="assets/facepalm.svg" alt="">
+                    Faceplant
                 </a>
             </li>
             <li class="horiz-list-item bar-sep">
                 <a href="https://picwars.xyz/dougsdogs">
-                    <img class="icon" src="assets/picwars.svg" alt="">PicWars
+                    <img class="icon" src="assets/picwars.svg" alt="">
+                    PicWars
                 </a>
             </li>
         </ul>
-        <p id="copyright">©2022 Doug & Peter Dobberty, all rights reserved.</p>
+        <p class="meta">
+            ©2023 Doug & Peter Dobberty, all rights reserved (<sup>*</sup>except not
+            really).
+        </p>
+
     </footer>
 </body>
 

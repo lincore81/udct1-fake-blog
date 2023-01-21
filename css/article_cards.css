@@ -9,15 +9,14 @@
     --double-width: span 2;
     --single-height: span 1;
     --double-height: span 1;
-
-    --max-article-img-height: 260px;
+    --max-article-img-width: 40%;
     --article-img-ratio: 1 / 1;
     --max-width: 1000px;
     --article-flex-dir: row;
 }
 
 /**
- * Designed to be viewed with a minimum inner width of 300px:
+ * designed for min inner width of 300px
  */
 
 @media (max-width: 719px) {
@@ -29,7 +28,7 @@
         --single-height: span 1;
         --double-height: span 2;
         --article-img-ratio: 2 / 1;
-        --max-article-img-height: 200px;
+        --max-article-img-width: 100%;
     }
 }
 
@@ -37,7 +36,7 @@
     #articles {
         --single-width: span 2;
         --double-width: span 4;
-        --max-article-img-height: 260px;
+        --max-article-img-width: 25%;
     }
 }
 
@@ -46,6 +45,7 @@
         --single-width: span 2;
         --double-width: span 4;
         --max-article-img-height: 280px;
+        --max-article-img-width: 25%;
     }
 }
 
@@ -55,6 +55,7 @@
         --double-width: span 2;
         --article-img-ratio: 3 / 4;
         --max-width: 1300px;
+        --max-article-img-width: 30%;
         --max-article-img-height: 330px;
     }
 }
@@ -73,91 +74,86 @@
 #articles {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-
-    /* This doesn't seem very flexible, but I don't want to hard code the grid
-     * template rows as that approach seems impractical for a static blog. 
-     */
     grid-auto-rows: min-content;
     grid-auto-flow: row;
     margin: 16px auto;
     max-width: var(--max-width);
 }
 
-.cat-care.card {
-    --accent-colour: green;
-}
-
-.cat-breeds.card {
-    --accent-colour: purple;
-}
-
-.cat-training.card {
-    --accent-colour: blue;
-}
-
-.cat-agility.card {
-    --accent-colour: darkorange;
-}
-
-.cat-personal.card {
-    --accent-colour: teal;
-}
-
-.cat-advert.card {
-    --accent-colour: black;
-    padding: 0;
-    min-height: 260px;
-}
 
 .card {
-    padding: 0;
     margin: 10px;
+    padding: 0;
     background: white;
     border-radius: 8px;
+    border: 2px solid var(--background-colour);
+    border-bottom: 4px solid var(--accent-colour);
+    min-height: 280px;
+    height: auto;
+}
+
+.card:hover {
+    border: 2px solid var(--accent-colour);
     border-bottom: 4px solid var(--accent-colour);
 }
 
+.card.feature:hover {
+    border: 2px solid white;
+    border-bottom: 4px solid white;
+}
+
 .card.feature {
-    padding: 16px 32px;
+    padding: 16px 0;
     background: var(--accent-colour);
     color: white;
     text-align: center;
+}
+
+.feature .article-preview {
+    padding: 0 32px;
 }
 
 .article-title.feature {
     font-size: 1.6em;
 }
 
-.single-col {
+.col1 {
     grid-column: var(--single-width);
 }
 
-.single-row {
+.row1 {
     grid-row: var(--single-height);
 }
 
-.double-col { 
+.col2 { 
     grid-column: var(--double-width);
+}
+
+.row2 {
+    grid-row: var(--double-height);
+}
+
+.cols {
     display: flex;
     flex-direction: var(--article-flex-dir);
 }
 
-.double-row {
-    grid-row: var(--double-height);
+.rows {
+    display: flex;
+    flex-direction: column;
 }
-
 
 .rows.advert {
     justify-content: space-between;
     height: 100%;
+    min-height: 260px;
 }
 
 .left-side {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 8px;
-
+    margin: 16px;
 }
 
 .article-title {
@@ -173,10 +169,10 @@
 }
 
 .article-image {
-    aspect-ratio: var(--article-img-ratio);
-    max-height: var(--max-article-img-height);
+    width: 100%;
+    max-width: var(--max-article-img-width);
     object-fit: cover;
-    border-radius: 6px;
+    border-radius: 5px;
 }
 
 .article-link {
@@ -186,8 +182,6 @@
 
 
 .article-header {
-    text-transform: uppercase;
-    font-size: 0.7em;
     flex-basis: auto;
 }
 
@@ -206,9 +200,6 @@
     font-weight: 700;
 }
 
-.button:hover {
-    opacity: 0.8;
-}
 
 .button.inverted {
     background: white;
@@ -223,15 +214,44 @@
     vertical-align: middle;
     border-radius: 50%;
     display: inline-block;
-    border: red 1px solid;
+    border: 2px solid var(--accent-colour);
 }
 
-.continue-reading {
-    display: block;
+.feature .author-thumb {
+    border: 2px solid white;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.article-cta {
+    margin: 0;
+    font-style: italic;
+}
+
+.article-cta::after {
+    content: " »";
+}
+
+
+.card-link {
+    height: 100%;
+}
+
+/*
+ * This will only apply the style to the second selector when hovering over the
+ * first.
+ */
+.card-link:hover .article-cta {
+    color: var(--accent-colour);
+    font-weight: 700;
+}
+
+.card-link:hover .button {
+    opacity: 0.8;
 }
 
 #butt-cover-ad {
     padding: 0;
+    height: auto;
     background:         
         url("../ads/butt-cover.jpeg");
     background-size: cover;
@@ -241,13 +261,16 @@
     color: white;
 }
 
-/** my ad blocker hides elements with these classes: */
+/** 
+ * my ad blocker hides elements with these classes: 
+ */
 .ad-title, .ad-tagline {
     margin: 0;
 }
 
 .ad-tagline {
     line-height: 1.1rem;
+    padding: 0 28px;
 }
 
 
@@ -261,4 +284,19 @@
     padding: 8px;
     background: rgba(0, 0, 0, 0.6);
     text-align: center;
+}
+
+#load-indicator {
+    margin: 32px auto;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+}
+
+#load-indicator-image {
+    max-width: 64px;
+}
+
+.pagination {
+    margin: 16px auto 32px;
 }
