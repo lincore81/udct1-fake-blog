@@ -1,69 +1,54 @@
 <!doctype html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Doug's Dog Blog</title>
+    <title>DDB: My daughter wanted a pony, I got her something better</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/article.css">
 </head>
 
 <body>
-    <header class="page-header">
-        <button id="menu">
-            <img src="assets/menu.svg" class="img-button">
+    <header id="page-header">
+        <button type="button" id="hamburger-menu-button" aria-label="Menu">
+            <img src="/assets/menu.svg" class="full-size-img" alt="">
         </button>
-        <div id="logo-and-title">
-            <img src="assets/logo.png" id="site-logo" alt="">
-            <h1 id="site-title" class="outlined">
-                Doug's Dog Blog
-            </h1>
+        <div id="main-menu">
+            <a href="/index.html" id="logo-and-title">
+                <img src="/assets/logo.png" id="site-logo" alt="">
+                <h1 id="site-title" class="outlined"> Doug's Dog Blog</h1>
+            </a>
+            <nav id="site-nav">
+                <ul class="header-item">
+                    <li class="nav-item">
+                        <a class="stdlink" href="#">Care</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="stdlink" href="#">Breeds</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="stdlink" href="#">Training</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="stdlink" href="#">Reviews</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="stdlink" href="#">Breeding</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="stdlink" href="#">Agility</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="stdlink" href="#">Personal</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="stdlink" href="#">Merch</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
-        <nav id="site-nav">
-            <ul class="header-item horiz-list">
-                <a href="#" class="nav-item">
-                    <li class="horiz-list-item">
-                        Care
-                    </li>
-                </a>
-                <a href="#" class="nav-item">
-                    <li class="horiz-list-item">
-                        Breeds
-                    </li>
-                </a>
-                <a href="#" class="nav-item">
-                    <li class="horiz-list-item">
-                        Training
-                    </li>
-                </a>
-                <a href="#" class="nav-item">
-                    <li class="horiz-list-item">
-                        Reviews
-                    </li>
-                </a>
-                <a href="#" class="nav-item">
-                    <li class="horiz-list-item">
-                        Breeding
-                    </li>
-                </a>
-                <a href="#" class="nav-item">
-                    <li class="horiz-list-item">
-                        Agility
-                    </li>
-                </a>
-                <a href="#" class="nav-item">
-                    <li class="horiz-list-item">
-                        Personal
-                    </li>
-                </a>
-                <a href="#" class="nav-item">
-                    <li class="horiz-list-item">
-                        Merch
-                    </li>
-                </a>
-            </ul>
-        </nav>
     </header>
-    <main id="blog-post">
+    <main>
         <article class="article card">
             <h2 class="article-title">
                 My daughter wanted a pony, I got her something better
@@ -73,6 +58,10 @@
                 my 3-year-old daughter. Instead of explaining that to her, I did
                 this.
             </p>
+            <figure>
+                <img src="main.jpg" alt="" class="full-width">
+                <figcaption>My daughter and her new pet</figcaption>
+            </figure>
             <p>
                 Giving a toddler her own pet sounds like an irresponsible
                 decision, but I have good reason. I want to groom my daughter
@@ -80,8 +69,9 @@
                 financial interest in her being a dog person first and foremost.
                 The worst thing I could image is her favouring any other kind of
                 animal. You can't imagine my disappointment when she told me
-                last month that she wanted a pony. My own flesh and blood! Now,
-                you can't fault a 3yo for having wrong opinions, but this
+                last month that she wanted a pony.
+                <strong>My own flesh and blood!</strong>
+                Now, you can't fault a 3yo for having wrong opinions, but this
                 reinforced my believe that she needs to have as much contact
                 with dogs as possible.
             </p>
@@ -102,7 +92,7 @@
                 should add a shop to this website where you folks can buy one?
                 Just be aware that the police and or child protective services
                 may get a bit confused when you let your daughter walk the dog
-                by herself. Obviously she needs to learn how to care for the
+                by herself. Obviously she <em>needs</em> to learn how to care for the
                 animal and take her responsibilities seriously. It is important
                 to me that she carries on my legacy and so I've been doing
                 creative writing lessons with her every week at her foster
@@ -111,48 +101,147 @@
             <p>
                 Anyway, thanks for reading. If you're interested in buying a
                 toddler-sized saddle, post a comment in this webzone! I might do
-                a merch drop in a few months.
+                a new merch drop in a few months.
             </p>
+            <footer id="article-footer" class="rows">
+                <div id="share" class="b">
+                    <img class="icon" src="/assets/share.svg" alt="">
+                    Share this article:
+                </div>
+                <ul class="footer-item">
+                    <li class="nav-item">
+                        <a href="https://elon.world/intent/weed?text=Check+this+out" class="stdlink">
+                            <img class="icon" src="/assets/elonia.svg" alt="">
+                            Elon's World
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://facepalm.social/share?text=Check+this+out" class="stdlink">
+                            <img class="icon" src="/assets/facepalm.svg" alt="">
+                            Faceplant
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://worklife.com/share?text=Check+this+out" class="stdlink">
+                            <img class="icon" src="/assets/worklife.svg" alt="">
+                            WorkLife
+                        </a>
+                    </li>
+                </ul>
+            </footer>
         </article>
+
+        <aside id="author" class="aside card">
+            <h2>About the Author</h2>
+            <header class="rows">
+                <img class="author-thumb" src="/assets/authors/doug.png" alt="">
+                <h3>Doug Dobberty</h3>
+            </header>
+            <p>
+                is a very talented writer and spokesperson about dog related
+                topics. When not writing about canines, he enjoys spending time
+                with his daughter and curating an impressive stamp collection.
+                Doug is the CEO of Dobberty &amp; Dobberty Ltd.
+            </p>
+            <a class="u" href="https://elon.world/dougdobberty">@dougdobberty</a>
+        </aside>
+
+        <aside id="related" class="aside card">
+            <nav>
+                <h2>Related Articles</h2>
+                <ul>
+                    <li>
+                        <a href="#" class="stdlink u">
+                            You wouldn't expect these dogs to be dog friendly
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="stdlink u">
+                            The 10 objectively best dog breeds in the word
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="stdlink u">
+                            Toddlers and dogs, 10 rules of engagement
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="stdlink u">
+                            Why your family needs a dog
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
     </main>
-    <footer class="page-footer">
-        <ul class="footer-item">
-            <li class="horiz-list-item bar-sep">
-                <a href="#">Terms & Conditions</a>
-            </li>
-            <li class="horiz-list-item bar-sep">
-                <a href="#">About</a>
-            </li>
-            <li class="horiz-list-item bar-sep">
-                <a href="#">Advertising</a>
-            </li>
-            <li class="horiz-list-item bar-sep">
-                <a href="#">Support Me</a>
-            </li>
-            <li class="horiz-list-item bar-sep">
-                <img src="assets/rss.svg" alt="">
-                <a href="#">RSS Feed</a>
-            </li>
-        </ul>
-        <ul class="footer-item">
-            <li class="horiz-list-item bar-sep">
-                <a href="https://elon.world/dougdobberty">
-                    <img class="icon" src="assets/elonia.svg" alt="">Elon's World
-                </a>
-            </li>
-            <li class="horiz-list-item bar-sep">
-                <a href="https://facepalm.social/dougdobberty">
-                    <img class="icon" src="assets/facepalm.svg" alt="">Faceplant
-                </a>
-            </li>
-            <li class="horiz-list-item bar-sep">
-                <a href="https://picwars.xyz/dougsdogs">
-                    <img class="icon" src="assets/picwars.svg" alt="">PicWars
-                </a>
-            </li>
-        </ul>
-        <p id="copyright">©2022 Doug & Peter Dobberty, all rights reserved.</p>
+
+    <nav class="pagination">
+        <button type="button" class="btn">« Previous</button>
+        <button type="button" class="btn" disabled>Next »</button>
+    </nav>
+
+    <footer id="page-footer">
+        <nav>
+            <ul>
+                <li class="nav-item">
+                    <a href="#" class="stdlink">Terms &amp; Conditions</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="stdlink">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="stdlink">Advertising</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="stdlink">
+                        <img class="icon" src="/assets/ebeg.svg" alt="">
+                        Support Me
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="stdlink">
+                        <img class="icon" src="/assets/rss.svg" alt="">
+                        RSS Feed
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://github.com/lincore81/udct1-fake-blog" 
+                       class="stdlink" target="_blank">
+                        <img class="icon" src="/assets/github.svg" alt="">
+                        Repo
+                    </a>
+                </li>
+            </ul>
+            <ul class="footer-item">
+                <li class="nav-item">
+                    <a href="https://elon.world/dougdobberty" class="stdlink">
+                        <img class="icon" src="/assets/elonia.svg" alt="">
+                        Elon's World
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://facepalm.social/dougdobberty" class="stdlink">
+                        <img class="icon" src="/assets/facepalm.svg" alt="">
+                        Faceplant
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://picwars.xyz/dougsdogs" class="stdlink">
+                        <img class="icon" src="/assets/picwars.svg" alt="">
+                        PicWars
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <p class="meta">
+            ©2023 Doug &amp; Peter Dobberty, all rights reserved
+            (<a class="stdlink" target="_blank"
+            href="https://github.com/lincore81/udct1-fake-blog/blob/main/LICENSE">*
+            except not really</a>).
+        </p>
     </footer>
+    <script src="/js/hamburger.js"></script>
 </body>
 
 </html>
