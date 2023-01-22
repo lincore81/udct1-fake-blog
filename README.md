@@ -1,5 +1,6 @@
-# Project 1: Fake blog -- dev log
+# Project 1: Fake blog
 
+Live: https://lincore81.github.io/udct1-fake-blog/
 
 ## Prototyping
 
