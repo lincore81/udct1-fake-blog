@@ -1,5 +1,6 @@
 # Project 1: Fake blog -- dev log
 
+
 ## Prototyping
 
 ### Layout
@@ -25,32 +26,33 @@ I am not sure how the layout needs to change to adapt to mid size screens (table
 ## Requirements
 
 ### Structure
- - [ ] homepage:
-    - [ ] nav
-    - [ ] blog post card(s) (presumably not the full article; contains card, image and buttons)
-    - [ ] footer
- - [ ] blog post
-    - [ ] header (why only mentioned here? Ought to be similar/identical to homepage)
-    - [ ] article meta (author info, social)
+ - [x] homepage:
+    - [x] nav
+    - [x] blog post card(s)
+    - [x] footer
+ - [x] blog post
+    - [ ] header
+    - [ ] article meta (attribution, social links)
     - [ ] presumably the article itself
 
 
 ### Layout & Design
- - Custom everything
+ - [x] Custom everything
  - [ ] Typography: 3 unique props per tag (h1, p (bold, italic, underlined), a, quote)
-    - I'll use strong, em and del anyway.
- - [ ] At least 3 colours
+ - [x] At least 3 colours
  - [ ] Components: image+caption, button (pseudo), card
  - [ ] responsive (mobile, tablet, desktop breakpoints)
 
 
 ### Technical
- - [ ] main.css contains three imported files
- - [ ] use grid and flexbox twice each
- - [ ] use semantic html
+ - [x] main.css contains three imported files
+ - [x] use grid and flexbox twice each
+ - [x] use semantic html
  - [ ] generic tags have a class or id
  - [ ] no trailing whitespace (sed)
  - [ ] avoid advanced css selectors
 
 
-
+## Attribution
+Icons curtosy of pictogrammers.com/google, licensed under Apache 2.0
+https://github.com/Templarian/MaterialDesign

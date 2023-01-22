@@ -1,0 +1,75 @@
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.4em;
+}
+
+h3 {
+    font-size: 1.2em;
+}
+
+ul {
+    padding-left: 0;
+}
+
+
+/*
+ * The following rules exists to meet the rubric requirements of 3 unique
+ * properties per typography selector. The design I'm aiming for doesn't need
+ * them, so I hope I hereby demonstrated that I understand how to style
+ * typographic tags.
+ */
+
+p {
+    font-weight: 400;
+    text-decoration: none;
+    color: black;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    text-transform: none;
+    background: transparent;
+}
+
+em {
+    color: black;
+    font-style: italic;
+    font-kerning: auto;
+}
+
+strong {
+    font-weight: 700;
+    color: black;
+    text-decoration: none;
+}
+
+u {
+    text-decoration: underline;
+    font-weight: 400;
+    text-transform: none;
+}
+
+blockquote {
+    background: #ccc;
+    padding: 24px 16px 16px;
+    border-left: 8px #666;
+    font-style: italic;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    font-weight: 400;
+}

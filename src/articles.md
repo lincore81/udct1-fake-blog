@@ -19,7 +19,7 @@ they have been selected for less aggression and make great family dogs today.
 There's no mandatory licence for dog owning, sadly, and so it is only natural
 that many new dog owners know next to nothing about man's best friend.
 
-## The 10 steps to train any dog 
+## The 10 steps to train any dog
 Whoever said that old dogs can't learn new tricks didn't read this article.
 Step number 7 is crucial, but often overlooked.
 
