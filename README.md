@@ -16,15 +16,14 @@ I ended up going with a row-based design instead of the column-based one shown a
 #### Blog post
 
 The blog article should have a maximum line length. Excess horizontal space is used to show meta information related to the article.
-At the end of the article, users can either chronologically navigate to previous and following articles. 
+At the end of the article, users can either chronologically navigate to previous and following articles.
 ![homepage mockup](src/mockups/blog-post.png)
 
 
 ### Responsiveness
 
-To maximise readability, a line length of 50-75ch should be maintained while the vw is sufficient (I have since learned that this only works well for monospaced fonts so).
+To maximise readability, a line length of 50-75ch should be maintained while the vw is sufficient (I have since learned that this only works well for monospaced fonts so I picked an approximate value).
 At least two breakpoints are needed to optimise layouts for mobile, tablet and desktop devices as per the requirements.
-I am not sure how the layout needs to change to adapt to mid size screens (tablets).
 
 
 ## Requirements
@@ -36,29 +35,29 @@ I am not sure how the layout needs to change to adapt to mid size screens (table
     - [x] blog post card(s)
     - [x] footer
  - [x] blog post
-    - [ ] header
-    - [ ] article meta (attribution, social links)
-    - [ ] presumably the article itself
+    - [x] header
+    - [x] article meta (attribution, social links)
+    - [x] presumably the article itself
 
 
 ### Layout & Design
  - [x] Custom everything
  - [x] Typography: 3 unique props per tag (h1, p (bold, italic, underlined), a, quote)
  - [x] At least 3 colours
- - [ ] Components: image+caption, button (pseudo), card
- - [ ] responsive (mobile, tablet, desktop breakpoints)
+ - [x] Components: image+caption, button (pseudo), card
+ - [x] responsive (mobile, tablet, desktop breakpoints)
 
 
 ### Technical
  - [x] main.css contains three imported files
  - [x] use grid and flexbox twice each
  - [x] use semantic html
- - [ ] generic tags have a class or id
- - [ ] no trailing whitespace (sed)
- - [ ] avoid advanced css selectors
+ - [x] generic tags have a class or id
+ - [x] no trailing whitespace
+ - [x] don't mix tags with classes/ids
 
 
 ## Attribution
 - Icons curtosy of pictogrammers.com/google, licensed under Apache 2.0
 https://github.com/Templarian/MaterialDesign
-- Don't ask about the images.
+- Please don't ask about the images.
