@@ -1,11 +1,101 @@
-/* depends on index.css */
-#blog-post {
-    width: 70ch;
-    max-width: 100%;
-    margin: auto;
+main {
+    margin: 32px auto;
+}
+
+@media (min-width: 1000px) {
+   main {
+        display: grid;
+        grid-template-areas:
+            "author  article ."
+            "related article ."
+            ".       article .";
+        grid-template-columns: 30ch 55ch;
+        gap: 20px;
+   }
+}
+
+@media (max-width: 999px) {
+   main {
+        display: flex;
+        flex-direction: column;
+   }
+
+   .card {
+        width: 55ch;
+        max-width: calc(100vw - 20px);
+   }
+}
+
+.card {
+    padding: 16px;
+    box-sizing: border-box;
+    line-height: 1.6;
+    margin: 10px auto;
+}
+
+/* I'd prefer to use aside.card here, but it's against the provided CSS style
+ * rules */
+.aside.card {
+    background: rgba(255, 255, 255, 0.6);
 }
 
 .article {
-    padding: 16px;
+    grid-area: article;
+    width: 55ch;
+    max-width: calc(100vw - 20px);
 }
 
+.article-teaser {
+    font-weight: 700;
+}
+
+#author {
+    grid-area: author;
+}
+
+#related {
+    grid-area: related;
+}
+
+figure {
+    margin: 0;
+    height: min-content;
+    position: relative;
+}
+
+figcaption {
+    position: absolute;
+    width: 100%;
+    padding: 8px 0;
+    background: rgba(0, 0, 0, 0.75);
+    color: white;
+    text-align: center;
+    bottom: 0;
+    border-radius: 0 0 8px 8px;
+}
+
+.full-width {
+    width: 100%;
+    display: block;
+    border-radius: 8px 8px 8px 8px;
+}
+
+#author > header {
+    border-bottom: 1px solid var(--accent-colour);
+    align-items: flex-end;
+}
+
+#author h3 {
+    margin-bottom: 0;
+}
+
+.author-thumb {
+    max-height: 60px;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+#article-footer {
+    align-items: center;
+    border-top: 1px solid var(--accent-colour);
+}

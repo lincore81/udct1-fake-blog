@@ -17,10 +17,15 @@ h2 {
 
 h3 {
     font-size: 1.2em;
+    margin-bottom: 8px;
 }
 
 ul {
     padding-left: 0;
+}
+
+li {
+    list-style: none;
 }
 
 
@@ -28,13 +33,13 @@ ul {
  * The following rules exists to meet the rubric requirements of 3 unique
  * properties per typography selector. The design I'm aiming for doesn't need
  * them, so I hope I hereby demonstrated that I understand how to style
- * typographic tags.
+ * typographic tags in a way to have no visible effect whatsoever.
  */
 
 p {
     font-weight: 400;
     text-decoration: none;
-    color: black;
+    color: inherit;
 }
 
 h1, h2, h3 {
@@ -44,14 +49,14 @@ h1, h2, h3 {
 }
 
 em {
-    color: black;
+    color: inherit;
     font-style: italic;
     font-kerning: auto;
 }
 
 strong {
     font-weight: 700;
-    color: black;
+    color: inherit;
     text-decoration: none;
 }
 
@@ -69,7 +74,7 @@ blockquote {
 }
 
 a {
-    color: black;
+    color: inherit;
     text-decoration: none;
     font-weight: 400;
 }

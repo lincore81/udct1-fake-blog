@@ -1,23 +1,22 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
     <title>Doug's Dog Blog</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/article_cards.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/article_cards.css">
 </head>
 
 <body>
     <header id="page-header">
-        <!-- TODO: add onclick listener that toggles #main-menu visibility (out of scope) -->
         <button type="button" id="hamburger-menu-button" aria-label="Menu">
-            <img src="assets/menu.svg" class="full-size-img" alt="">
+            <img src="/assets/menu.svg" class="full-size-img" alt="">
         </button>
         <div id="main-menu">
             <div id="logo-and-title">
-                <img src="assets/logo.png" id="site-logo" alt="">
-                <h1 id="site-title" class="outlined"> Doug's Dog Blog</h1>
+                <img src="/assets/logo.png" id="site-logo" alt="">
+                <h1 id="site-title" class="outlined">Doug's Dog Blog</h1>
             </div>
             <nav id="site-nav">
                 <ul class="header-item">
@@ -49,16 +48,23 @@
             </nav>
         </div>
     </header>
+
+
     <main id="articles">
         <section class="col2 row2 card">
-            <a href="articles/2023-01-08-giant-dogs/article.html"
-               class="cols card-link" aria-describedby="cta1">
+            <!-- 
+                The rubric wants 'Buttons', but I think a link
+                is more appropriate here (semantics/a11y).
+                I added some buttons further below, I hope that's ok.
+                https://yatil.net/blog/buttons-vs-links
+            -->
+            <a href="/articles/2023-01-08-giant-dogs/article.html"
+               class="rows card-link" aria-describedby="cta1">
                 <div class="article-info">
                     <header class="article-header meta">
-                        <img class="author-thumb" src="assets/authors/doug.png"
+                        <img class="author-thumb" src="/assets/authors/doug.png"
                              alt="">
-                        <span class="bar-sep">Doug Dobberty</span>
-                        <span class="bar-sep">08/01/2023</span>
+                        Doug Dobberty 08/01/2023
                     </header>
                     <div class="article-preview">
                         <h2 class="article-title">
@@ -75,19 +81,18 @@
                         </p>
                     </div>
                 </div>
-                <img src="articles/2023-01-08-giant-dogs/main.jpg"
+                <img src="/articles/2023-01-08-giant-dogs/main.jpg"
                      class="article-image" alt="">
             </a>
         </section>
 
         <section class="col2 row2 card">
-            <a href="articles/2022-12-19-giant-dogs/article.html"
-               class="cols card-link" aria-describedby="cta2">
+            <a href="/articles/2023-01-08-giant-dogs/article.html"
+               class="rows card-link" aria-describedby="cta2">
                 <div class="article-info">
                     <header class="article-header meta">
-                        <img class="author-thumb" src="assets/authors/peter.png" alt="">
-                        <span class="bar-sep">Peter Dobberty</span>
-                        <span class="bar-sep">18/12/2022</span>
+                        <img class="author-thumb" src="/assets/authors/peter.png" alt="">
+                        Peter Dobberty 18/12/2022
                     </header>
                     <div class="article-preview">
                         <h2 class="article-title">
@@ -99,23 +104,22 @@
                             dog food seems like a luxury. However, a recent
                             study comes to a different conclusion.
                         </p>
-                        <!-- Refusing to nest links (bad a11y and more) -->
+                        <!-- Nesting links causes a11y problems -->
                         <p class="article-cta pseudo-link" id="cta2">
                             Continue reading
                         </p>
                     </div>
                 </div>
-                <img src="articles/2022-12-17-good-dog-food/main.webp"
+                <img src="/articles/2022-12-17-good-dog-food/main.webp"
                      class="article-image" alt="">
             </a>
         </section>
         <section class="col1 row1 card feature">
             <a href="https://www.akc.org/breed-selector-tool" target="_blank"
-               class="rows card-link" aria-describedby="cta3">
+               class="columns card-link" aria-describedby="cta3">
                 <header class="article-header meta">
-                    <img class="author-thumb" src="assets/authors/doug.png" alt="">
-                    <span class="bar-sep">Doug Dobberty</span>
-                    <span class="bar-sep">15/12/2022</span>
+                    <img class="author-thumb" src="/assets/authors/doug.png" alt="">
+                    Doug Dobberty 15/12/2022
                 </header>
                 <div class="article-preview">
                     <h2 class="article-title feature">
@@ -133,7 +137,7 @@
 
         <section class="col1 card" id="butt-cover-ad">
             <a href="https://www.etsy.com/listing/210782327/flower-rear-gear-butt-covers-for-your"
-               target="_blank" class="advert rows card-link">
+               target="_blank" class="advert columns card-link">
                 <div class="ad-tag">#ad</div>
                 <div class="ad-caption">
                     <h2 class="ad-title">
@@ -147,13 +151,12 @@
         </section>
 
         <section class="col2 row2 card">
-            <a href="articles/2022-12-19-giant-dogs/article.html"
-               class="cols card-link" aria-describedby="cta4">
+            <a href="/articles/2023-01-08-giant-dogs/article.html"
+               class="rows card-link" aria-describedby="cta4">
                 <div class="article-info">
                     <header class="article-header meta">
-                        <img class="author-thumb" src="assets/authors/doug.png" alt="">
-                        <span class="bar-sep">Doug Dobberty</span>
-                        <span class="bar-sep">03/12/2022</span>
+                        <img class="author-thumb" src="/assets/authors/doug.png" alt="">
+                        Doug Dobberty 03/12/2022
                     </header>
                     <div class="article-preview">
                         <h2 class="article-title">It's time to unfug the pug
@@ -168,19 +171,18 @@
                         </p>
                     </div>
                 </div>
-                <img src="articles/2022-12-03-pug/main.jpg"
+                <img src="/articles/2022-12-03-pug/main.jpg"
                      class="article-image" alt="">
             </a>
         </section>
 
         <section class="col2 row2 card">
-            <a href="articles/2022-12-19-giant-dogs/article.html"
-               class="cols card-link" aria-describedby="cta5">
+            <a href="/articles/2023-01-08-giant-dogs/article.html"
+               class="rows card-link" aria-describedby="cta5">
                 <div class="article-info">
                     <header class="article-header meta">
-                        <img class="author-thumb" src="assets/authors/doug.png" alt="">
-                        <span class="bar-sep">Doug Dobberty</span>
-                        <span class="bar-sep">18/11/2022</span>
+                        <img class="author-thumb" src="/assets/authors/doug.png" alt="">
+                        Doug Dobberty 18/11/2022
                     </header>
                     <div class="article-preview">
                         <h2 class="article-title">
@@ -197,19 +199,18 @@
                         </p>
                     </div>
                 </div>
-                <img src="articles/2022-11-18-kid-friendly-dogs/main.webp"
+                <img src="/articles/2022-11-18-kid-friendly-dogs/main.webp"
                      class="article-image" alt="">
             </a>
         </section>
 
         <section class="col2 row2 card">
-            <a href="articles/2022-12-19-giant-dogs/article.html"
-               class="cols card-link" aria-describedby="cta6">
+            <a href="/articles/2023-01-08-giant-dogs/article.html"
+               class="rows card-link" aria-describedby="cta6">
                 <div class="article-info">
                     <header class="article-header meta">
-                        <img class="author-thumb" src="assets/authors/peter.png" alt="">
-                        <span class="bar-sep">Peter Dobberty</span>
-                        <span class="bar-sep">10/11/2022</span>
+                        <img class="author-thumb" src="/assets/authors/peter.png" alt="">
+                        Peter Dobberty 10/11/2022
                     </header>
                     <div class="article-preview">
                         <h2 class="article-title">
@@ -226,19 +227,18 @@
                         </p>
                     </div>
                 </div>
-                <img src="articles/2022-11-10-dog-therapy/main.webp"
+                <img src="/articles/2022-11-10-dog-therapy/main.webp"
                      class="article-image" alt="">
             </a>
         </section>
 
         <section class="col2 row2 card">
-            <a href="articles/2022-12-19-giant-dogs/article.html"
-               class="cols card-link" aria-describedby="cta7">
+            <a href="/articles/2023-01-08-giant-dogs/article.html"
+               class="rows card-link" aria-describedby="cta7">
                 <div class="article-info">
                     <header class="article-header meta">
-                        <img class="author-thumb" src="assets/authors/doug.png" alt="">
-                        <span class="bar-sep">Doug Dobberty</span>
-                        <span class="bar-sep">31/10/2022</span>
+                        <img class="author-thumb" src="/assets/authors/doug.png" alt="">
+                        Doug Dobberty 31/10/2022
                     </header>
                     <div class="article-preview">
                         <h2 class="article-title">
@@ -254,19 +254,18 @@
                         </p>
                     </div>
                 </div>
-                <img src="articles/2022-10-31-dog-training/main.webp"
+                <img src="/articles/2022-10-31-dog-training/main.webp"
                      class="article-image" alt="">
             </a>
         </section>
 
         <section class="col1 row2 card">
-            <a href="articles/2022-12-19-giant-dogs/article.html"
+            <a href="/articles/2023-01-08-giant-dogs/article.html"
                class="card-link" aria-describedby="cta8">
                 <div class="article-info">
                     <header class="article-header meta">
-                        <img class="author-thumb" src="assets/authors/peter.png" alt="">
-                        <span class="bar-sep">Peter Dobberty</span>
-                        <span class="bar-sep">26/10/2022</span>
+                        <img class="author-thumb" src="/assets/authors/peter.png" alt="">
+                        Peter Dobberty 26/10/2022
                     </header>
                     <div class="article-preview">
                         <h2 class="article-title">
@@ -287,11 +286,10 @@
 
         <section class="col1 row1 card feature">
             <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"
-               class="rows card-link" aria-describedby="cta9">
+               class="columns card-link" aria-describedby="cta9">
                 <header class="article-header meta">
-                    <img class="author-thumb" src="assets/authors/doug.png" alt="">
-                    <span class="bar-sep">Doug Dobberty</span>
-                    <span class="bar-sep">20/10/2022</span>
+                    <img class="author-thumb" src="/assets/authors/doug.png" alt="">
+                    Doug Dobberty 20/10/2022
                 </header>
                 <div class="article-preview">
                     <h2 class="article-title feature">
@@ -308,13 +306,12 @@
         </section>
 
         <section class="col2 row2 card">
-            <a href="articles/2022-12-19-giant-dogs/article.html"
-               class="cols card-link" aria-describedby="cta10">
+            <a href="/articles/2023-01-08-giant-dogs/article.html"
+               class="rows card-link" aria-describedby="cta10">
                 <div class="article-info">
                     <header class="article-header meta">
-                        <img class="author-thumb" src="assets/authors/doug.png" alt="">
-                        <span class="bar-sep">Doug Dobberty</span>
-                        <span class="bar-sep">09/10/2022</span>
+                        <img class="author-thumb" src="/assets/authors/doug.png" alt="">
+                        Doug Dobberty 09/10/2022
                     </header>
                     <div class="article-preview">
                         <h2 class="article-title">
@@ -330,19 +327,18 @@
                         </p>
                     </div>
                 </div>
-                <img src="articles/2022-10-09-seo/main.jpg"
+                <img src="/articles/2022-10-09-seo/main.jpg"
                      class="article-image" alt="">
             </a>
         </section>
 
         <section class="col2 row2 card">
-            <a href="articles/2022-12-19-giant-dogs/article.html"
-               class="cols card-link" aria-describedby="cta11">
+            <a href="/articles/2023-01-08-giant-dogs/article.html"
+               class="rows card-link" aria-describedby="cta11">
                 <div class="article-info">
                     <header class="article-header meta">
-                        <img class="author-thumb" src="assets/authors/peter.png" alt="">
-                        <span class="bar-sep">Peter Dobberty</span>
-                        <span class="bar-sep">28/09/2022</span>
+                        <img class="author-thumb" src="/assets/authors/peter.png" alt="">
+                        Peter Dobberty 28/09/2022
                     </header>
                     <div class="article-preview">
                         <h2 class="article-title">
@@ -359,16 +355,18 @@
                         </p>
                     </div>
                 </div>
-                <img src="articles/2022-09-28-gay-dogs/main.webp"
+                <img src="/articles/2022-09-28-gay-dogs/main.webp"
                      class="article-image" alt="">
             </a>
         </section>
 
     </main>
+
     <nav class="pagination">
         <button type="button" class="btn">« Older</button>
         <button type="button" class="btn" disabled>Newer »</button>
     </nav>
+
     <footer id="page-footer">
         <nav>
             <ul>
@@ -383,33 +381,40 @@
                 </li>
                 <li class="nav-item">
                     <a href="#" class="stdlink">
-                        <img class="icon" src="assets/ebeg.svg" alt="">
+                        <img class="icon" src="/assets/ebeg.svg" alt="">
                         Support Me
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="#" class="stdlink">
-                        <img class="icon" src="assets/rss.svg" alt="">
+                        <img class="icon" src="/assets/rss.svg" alt="">
                         RSS Feed
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://github.com/lincore81/udct1-fake-blog" 
+                       class="stdlink" target="_blank">
+                        <img class="icon" src="/assets/github.svg" alt="">
+                        Repo
                     </a>
                 </li>
             </ul>
             <ul class="footer-item">
                 <li class="nav-item">
                     <a href="https://elon.world/dougdobberty" class="stdlink">
-                        <img class="icon" src="assets/elonia.svg" alt="">
+                        <img class="icon" src="/assets/elonia.svg" alt="">
                         Elon's World
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="https://facepalm.social/dougdobberty" class="stdlink">
-                        <img class="icon" src="assets/facepalm.svg" alt="">
+                        <img class="icon" src="/assets/facepalm.svg" alt="">
                         Faceplant
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="https://picwars.xyz/dougsdogs" class="stdlink">
-                        <img class="icon" src="assets/picwars.svg" alt="">
+                        <img class="icon" src="/assets/picwars.svg" alt="">
                         PicWars
                     </a>
                 </li>
@@ -422,48 +427,7 @@
             except not really</a>).
         </p>
     </footer>
-    <script>
-        // open/close hamburger menu
-
-        let isUnfolded = false
-        const menu = document.querySelector("#main-menu")
-            , button = document.querySelector("#hamburger-menu-button")
-            , buttonimg = button.querySelector(`img`)
-
-        function toggleMenu(mode) {
-            let shouldUnfold = false;
-            if (mode === `toggle`) {
-                shouldUnfold = !menu.classList.contains("unfolded")
-            } else {
-                shouldUnfold = mode
-                menu.classList.remove()
-                menu.classList.toggle("unfolded")
-                button.classList.toggle("unfolded")
-            }
-
-            if (shouldUnfold) {
-                button.setAttribute(`aria-label`, `Close`)
-                buttonimg.setAttribute(`src`, `assets/close.svg`)
-                menu.classList.add(`unfolded`)
-                button.classList.add(`unfolded`)
-            } else {
-                button.setAttribute(`aria-label`, `Menu`)
-                buttonimg.setAttribute(`src`, `assets/menu.svg`)
-                menu.classList.remove(`unfolded`)
-                button.classList.remove(`unfolded`)
-            }
-            isUnfolded = shouldUnfold
-        }
-
-        button.onclick = () => toggleMenu(`toggle`)
-
-        window.onresize = () => {
-            if (isUnfolded && window.innerWidth >= 720) {
-                toggleMenu(false)
-            }
-        }
-
-    </script>
+    <script src="/js/hamburger.js"></script>
 </body>
 
 </html>

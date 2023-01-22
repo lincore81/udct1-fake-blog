@@ -1,11 +1,4 @@
-/** depends on
- *  - index.css
- *      - util.css
- */
-
-/* defaults */
 #articles {
-    --row-height: min-content;
     /* card grid sizes */
     --single-width: span 1;
     --double-width: span 2;
@@ -81,18 +74,6 @@
     max-width: var(--max-width);
 }
 
-
-.card {
-    margin: 10px;
-    padding: 0;
-    background: white;
-    border-radius: 8px;
-    border: 2px solid var(--background-colour);
-    border-bottom: 4px solid var(--accent-colour);
-    min-height: 280px;
-    height: auto;
-}
-
 .card:hover {
     border: 2px solid var(--accent-colour);
     border-bottom: 4px solid var(--accent-colour);
@@ -114,12 +95,11 @@
     padding: 0 32px;
 }
 
-.feature.article-title {
+.feature .article-title {
     font-size: 1.6em;
 }
 
 /* Card size on grid */
-
 .col1 {
     grid-column: var(--single-width);
 }
@@ -137,14 +117,8 @@
 }
 
 
-.cols {
-    display: flex;
-    flex-direction: var(--article-flex-dir);
-}
-
 .rows {
-    display: flex;
-    flex-direction: column;
+    flex-direction: var(--article-flex-dir);
 }
 
 .rows.advert {

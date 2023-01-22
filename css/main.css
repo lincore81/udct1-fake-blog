@@ -1,11 +1,11 @@
 @import "./normalize.css";
 @import "./typography.css";
-@import "./util.css";
 @import "./header.css";
 @import "./footer.css";
 
 /* Heebo, "Sigmar One" */
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@200;400;700&family=Sigmar+One&display=swap');
+
 :root {
     font-family: Heebo, Arial, sans-serif;
     font-size: 1.2rem;
@@ -26,22 +26,42 @@ body {
     flex-direction: column;
 }
 
-
+.card {
+    margin: 10px;
+    padding: 0;
+    background: white;
+    border-radius: 8px;
+    border: 2px solid var(--background-colour);
+    border-bottom: 4px solid var(--accent-colour);
+    min-height: 280px;
+    height: auto;
+}
 
 
 .stdlink {
     color: #600a0a;
 }
+
 .stdlink:hover {
     font-weight: 700;
+    text-shadow: 0 1px 0 white;
 }
 
 .stdlink:visited {
     color: #333;
 }
 
+.u {
+    text-decoration: underline;
+}
+
+.b {
+    font-weight: 700;
+}
+
 .stdlink:focus {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-weight: 700;
+    text-shadow: 0 1px 0 var(--accent-colour);
 }
 
 .btn {
@@ -61,8 +81,9 @@ body {
 .btn:disabled {
     background: none;
     color: black;
-    border-color: grey;
-    opacity: 0.5;
+    border: black dotted 2px;
+
+    opacity: 0.6;
 }
 
 .btn + .btn {
@@ -80,3 +101,27 @@ body {
     font-size: 0.7em;
 }
 
+.icon {
+    height: 1em;
+    vertical-align: middle;
+}
+
+.nav-item {
+    list-style: none;
+    display: inline;
+    margin-left: 7px;
+}
+
+.rows {
+    display: flex;
+    flex-direction: row;
+}
+
+.columns {
+    display: flex;
+    flex-direction: column;
+}
+
+.pagination {
+    margin: 16px auto 32px;
+}
