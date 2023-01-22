@@ -1,23 +1,23 @@
-
-/* VARIABLES */
+/** depends on
+ *  - index.css
+ *      - util.css
+ */
 
 /* defaults */
 #articles {
-    --row-height: min-content; 
+    --row-height: min-content;
     /* card grid sizes */
     --single-width: span 1;
     --double-width: span 2;
     --single-height: span 1;
     --double-height: span 1;
+
     --max-article-img-width: 40%;
     --article-img-ratio: 1 / 1;
     --max-width: 1000px;
     --article-flex-dir: row;
 }
 
-/**
- * designed for min inner width of 300px
- */
 
 @media (max-width: 719px) {
     #articles {
@@ -29,6 +29,7 @@
         --double-height: span 2;
         --article-img-ratio: 2 / 1;
         --max-article-img-width: 100%;
+        --max-article-img-height: 280px;
     }
 }
 
@@ -97,25 +98,27 @@
     border-bottom: 4px solid var(--accent-colour);
 }
 
-.card.feature:hover {
-    border: 2px solid white;
-    border-bottom: 4px solid white;
-}
-
-.card.feature {
+.feature.card {
     padding: 16px 0;
     background: var(--accent-colour);
     color: white;
     text-align: center;
 }
 
+.feature.card:hover {
+    border: 2px solid white;
+    border-bottom: 4px solid white;
+}
+
 .feature .article-preview {
     padding: 0 32px;
 }
 
-.article-title.feature {
+.feature.article-title {
     font-size: 1.6em;
 }
+
+/* Card size on grid */
 
 .col1 {
     grid-column: var(--single-width);
@@ -125,13 +128,14 @@
     grid-row: var(--single-height);
 }
 
-.col2 { 
+.col2 {
     grid-column: var(--double-width);
 }
 
 .row2 {
     grid-row: var(--double-height);
 }
+
 
 .cols {
     display: flex;
@@ -149,7 +153,7 @@
     min-height: 260px;
 }
 
-.left-side {
+.article-info {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -171,6 +175,7 @@
 .article-image {
     width: 100%;
     max-width: var(--max-article-img-width);
+    max-height: var(--max-article-img-height);
     object-fit: cover;
     border-radius: 5px;
 }
@@ -179,7 +184,6 @@
     display: block;
     margin: 10px;
 }
-
 
 .article-header {
     flex-basis: auto;
@@ -252,7 +256,7 @@
 #butt-cover-ad {
     padding: 0;
     height: auto;
-    background:         
+    background:
         url("../ads/butt-cover.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -261,8 +265,8 @@
     color: white;
 }
 
-/** 
- * my ad blocker hides elements with these classes: 
+/**
+ * my ad blocker hides elements with these classes:
  */
 .ad-title, .ad-tagline {
     margin: 0;
@@ -280,23 +284,24 @@
     font-size: 0.5em;
 }
 
-.ad-content {
+.ad-caption {
     padding: 8px;
     background: rgba(0, 0, 0, 0.6);
     text-align: center;
 }
 
-#load-indicator {
-    margin: 32px auto;
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-}
-
-#load-indicator-image {
-    max-width: 64px;
-}
-
 .pagination {
     margin: 16px auto 32px;
+}
+
+
+@media (max-width: 380px) {
+    .pagination {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .pagination > .btn {
+        margin: 4px 10px;
+    }
 }

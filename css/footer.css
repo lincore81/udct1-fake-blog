@@ -1,13 +1,45 @@
+/** depends on
+ *  - index.css
+ *      - util.css
+ */
+
 #page-footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 40px 0 8px;
-    background: url("../assets/footer-bg.png");
+    background: url("../assets/footer-bg.png"), var(--menu-background-colour);
     background-size: contain;
+    background-position-y: 0;
+    background-repeat: repeat-x;
 }
 
-.footer-item {
+#page-footer, #page-footer > nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#page-footer > nav > * {
     margin: 4px 0;
+}
+
+@media (max-width: 719px) {
+    #page-footer ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #page-footer > p {
+        text-align: center;;
+    }
+
+    #page-footer .nav-item > a{
+        padding: 16px 0;
+        margin: 8px 0;
+        display: inline-block;
+    }
+
 }

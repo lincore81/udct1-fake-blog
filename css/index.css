@@ -1,6 +1,6 @@
 @import "./normalize.css";
+@import "./typography.css";
 @import "./util.css";
-@import "./article_cards.css";
 @import "./header.css";
 @import "./footer.css";
 
@@ -10,78 +10,39 @@
     font-family: Heebo, Arial, sans-serif;
     font-size: 1.2rem;
     --background-colour: #cbc7b7;
-    --palette-card-bg: white;
-    --palette-aside-bg: gainsboro;
-    --palette-text: black;
-    --palette-accent: purple;
-    --palette-meta-bg: #cdaf76;
     --accent-colour: #bb2649;
-}
-
-#blog-post {
-    width: 70ch;
-    max-width: 100%;
-    margin: auto;
-}
-
-.article {
-    padding: 16px;
+    --menu-background-colour: #cdaf76;
 }
 
 html {
-    /*#background: linear-gradient(135deg, var(--palette-hotpink) 0%, var(--palette-teal) 100%);*/
-    background: var(--background-colour) ;
+    background: var(--background-colour);
     height: 100vh;
 }
 
 body {
     margin: 0;
     min-height: 100vh;
-
     display: flex;
     flex-direction: column;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
+
+
+
+.stdlink {
+    color: #600a0a;
 }
-
-
-h1, h2, h3 {
+.stdlink:hover {
     font-weight: 700;
-    line-height: 1.1em;
 }
 
-h1 {
-    font-size: 2em;
+.stdlink:visited {
+    color: #333;
 }
 
-h2 {
-    font-size: 1.4em;
+.stdlink:focus {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
-
-h3 {
-    font-size: 1.3em;
-}
-
-.tags {
-    margin: 0;
-    font-size: 0.8em;
-}
-
-.tag {
-    background: silver;
-    border-radius: 20px;
-    padding: 2px 4px;
-    font-size: 0.9em;
-    border: 0;
-}
-
-.tag:hover {
-    background: lightblue;
-}
-
 
 .btn {
     min-width: 160px;
@@ -105,7 +66,7 @@ h3 {
 }
 
 .btn + .btn {
-    margin-left: 16px;
+    margin-left: 2vw;
 }
 
 .full-size-img {
@@ -118,3 +79,4 @@ h3 {
     text-transform: uppercase;
     font-size: 0.7em;
 }
+
