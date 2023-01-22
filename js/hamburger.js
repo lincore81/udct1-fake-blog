@@ -19,12 +19,12 @@ function toggleMenu(mode) {
 
     if (shouldUnfold) {
         button.setAttribute(`aria-label`, `Close`)
-        buttonimg.setAttribute(`src`, `/assets/close.svg`)
+        buttonimg.setAttribute(`src`, `/udct1-fake-blog/assets/close.svg`)
         menu.classList.add(`unfolded`)
         button.classList.add(`unfolded`)
     } else {
         button.setAttribute(`aria-label`, `Menu`)
-        buttonimg.setAttribute(`src`, `/assets/menu.svg`)
+        buttonimg.setAttribute(`src`, `/udct1-fake-blog/assets/menu.svg`)
         menu.classList.remove(`unfolded`)
         button.classList.remove(`unfolded`)
     }
