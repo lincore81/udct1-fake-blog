@@ -57,13 +57,13 @@ main {
     grid-area: related;
 }
 
-figure {
+.img-figure {
     margin: 0;
     height: min-content;
     position: relative;
 }
 
-figcaption {
+.img-caption {
     position: absolute;
     width: 100%;
     padding: 8px 0;
@@ -98,4 +98,12 @@ figcaption {
 #article-footer {
     align-items: center;
     border-top: 1px solid var(--accent-colour);
+}
+
+.quote {
+    margin: 32px;
+}
+
+.citation:before {
+    content: "—";
 }
