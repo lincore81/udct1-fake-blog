@@ -67,10 +67,17 @@ u {
 }
 
 blockquote {
-    background: #ccc;
+    background: var(--background-colour);
     padding: 24px 16px 16px;
-    border-left: 8px #666;
-    font-style: italic;
+    border-radius: 8px;
+    font-size: 1.1em;
+    margin: 0;
+    font-family: serif;
+}
+
+blockquote > p {
+    margin: 0;
+    white-space: pre-line;
 }
 
 a {
